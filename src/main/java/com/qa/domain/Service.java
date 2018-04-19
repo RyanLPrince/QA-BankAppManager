@@ -1,6 +1,7 @@
 package com.qa.domain;
 
 import java.util.HashMap;
+import java.util.stream.Collectors;;
  
 public class Service {
 
@@ -31,6 +32,7 @@ public class Service {
 	public HashMap<Integer, Account> getAccountMap(){
 		return accountMap;
 	}
+	
 	public int countAccountsWithSameFirstName(String name) {
 		int count=0;
 		for (Account account: accountMap.values()) {
@@ -41,5 +43,12 @@ public class Service {
 		}
 		return count;
 	}
+	
+	public int countAccountsWithSameFirstNameWithStream(String name) {
+		
+		return (int) accountMap.values().stream()
+				.filter(Account -> Account.getFirstName().equals(name)).count();
+	}
+	
 }
 
