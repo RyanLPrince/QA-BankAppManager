@@ -31,6 +31,8 @@ public class Service {
 	public HashMap<Integer, Account> getAccountMap(){
 		return accountMap;
 	}
-	
+	public int countAccountsWithSameFirstName() {
+		return 0;
+	}
 }
 
