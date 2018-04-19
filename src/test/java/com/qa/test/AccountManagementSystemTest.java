@@ -86,8 +86,11 @@ public class AccountManagementSystemTest {
 		Account account1=new Account("Ryan","Smith",33);
 		Account account2=new Account("Bryan","Smith",38);
 		Account account3=new Account("Ryan","Jones",39);
+		service.addAccount(account1);
+		service.addAccount(account2);
+		service.addAccount(account3);
 		int expected=3;
-		int actual=service.countAccountsWithSameFirstName();
+		int actual=service.countAccountsWithSameFirstName("Ryan");
 		assertEquals(expected,actual);
 		
 	}

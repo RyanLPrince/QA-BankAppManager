@@ -15,4 +15,7 @@ public class Account {
 	public Integer getAccountNumber() {		
 		return this.accountNumber;
 	}		
+	public String getFirstName() {		
+		return this.firstName;
+	}	
 }
