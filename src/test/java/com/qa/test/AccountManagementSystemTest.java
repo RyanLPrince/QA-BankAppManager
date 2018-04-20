@@ -107,7 +107,6 @@ public class AccountManagementSystemTest {
 		int expected=3;
 		int actual=service.countAccountsWithSameFirstNameWithStream("Ryan");
 		assertEquals(expected,actual);
-		
 	}
 	
 }

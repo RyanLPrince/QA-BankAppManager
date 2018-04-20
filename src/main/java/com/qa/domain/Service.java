@@ -9,7 +9,8 @@ public class Service {
 	
 	public void addAccount(Account account) {
 		if(accountMap.containsKey(account.getAccountNumber())){
-			System.out.println("Account number already exsits.");
+			System.out.println("An account with this account number already exsits.");
+			System.out.println("Request denied.");
 		}
 		else {
 			accountMap.put(account.getAccountNumber(),account);
@@ -41,11 +42,11 @@ public class Service {
 			}
 			
 		}
+		System.out.println("Number of accounts with the first name " +name+" is "+count);
 		return count;
 	}
 	
 	public int countAccountsWithSameFirstNameWithStream(String name) {
-		
 		return (int) accountMap.values().stream()
 				.filter(Account -> Account.getFirstName().equals(name)).count();
 	}
